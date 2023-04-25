@@ -1,0 +1,297 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark Blue: hsl(233, 26%, 24%)
+- Lime Green: hsl(136, 65%, 51%)
+- Bright Cyan: hsl(192, 70%, 51%)
+
+### Neutral
+
+- Grayish Blue: hsl(233, 8%, 62%)
+- Light Grayish Blue: hsl(220, 16%, 96%)
+- Very Light Gray: hsl(0, 0%, 98%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+font-family: 'Public Sans', sans-serif;
+
+- Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
+- Weights: 300, 400, 700 */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+
+:root{
+    --P-Dark-Blue: hsl(233, 26%, 24%);
+    --P-Lime-Green: hsl(136, 65%, 51%);
+    --P-Bright-Cyan: hsl(192, 70%, 51%);
+    --N-Grayish-Blue: hsl(233, 8%, 62%);
+    --N-Light-Grayish-Blue: hsl(220, 16%, 96%);
+    --N-Very-Light-Gray: hsl(0, 0%, 98%);
+    --N-White: hsl(0, 0%, 100%);
+    --font-size1: 1.125rem;
+}
+
+body{
+    overflow-x: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--N-White);
+    padding: 2rem 7rem;
+    position: relative;
+    z-index: 999;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--N-Grayish-Blue);
+    padding: 0 1rem;
+}
+
+.request-button a{
+    color: var(--N-White);
+    font-weight: 700;
+    text-decoration: none;
+    background: linear-gradient(85deg, rgba(49,211,92,1) 22%, rgba(43,183,218,1) 100%);
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 0.925rem;
+}
+
+.request-button a:hover{
+    opacity: 70%;
+}
+
+.burger{
+    display: none;
+}
+/* MAIN */
+
+main{
+    background: url(/img/bg-intro-desktop.svg)no-repeat right;
+    background-size: cover;
+    background-position-x: 35rem;
+    background-color: var(--N-Very-Light-Gray);
+    padding: 0 7rem;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content h1{
+    font-weight: 400;
+    font-size: 4rem;
+    max-width: 500px;
+    color: var(--P-Dark-Blue);
+    margin-bottom: 2rem;
+}
+
+.left-content p{
+    max-width: 400px;
+    color: var(--N-Grayish-Blue);
+}
+
+.left-content .request-button{
+    margin-top: 3rem;
+}
+
+.right-content{
+   width: 50%;
+
+}
+
+.hero-img{
+    position: absolute;
+    top: -1rem;
+    right: -7rem;
+    width: 700px;
+}
+
+/* SECTION */
+
+.middle-section{
+    padding: 5rem 7rem;
+    background-color: var(--N-Light-Grayish-Blue);
+}
+
+.middle-section h2{
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--P-Dark-Blue);
+}
+
+.middle-section p{
+    color: var(--N-Grayish-Blue);
+    max-width: 600px;
+}
+
+.flex-container{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.box{
+    max-width: 500px;
+}
+
+.box img{
+    width: 50px;
+}
+
+.box h3{
+    font-weight: 400;
+    padding: 1.2rem 0;
+}
+
+/* ARTICLES */
+
+.articles-container{
+    padding: 5rem 7rem;
+    background-color: var(--N-Very-Light-Gray);
+}
+
+.articles-container h2{
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 0 0 2rem 0;
+}
+
+.articles-box-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
+}
+
+.articles-box{
+    background-color: var(--N-White);
+    text-decoration: none;
+}
+
+.articles-box img{
+    width: 100%;
+    height: 230px;
+}
+
+.articles-box span{
+    font-size: 0.8rem;
+    color: var(--N-Grayish-Blue);
+}
+
+.articles-box h3{
+    font-weight: 400;
+    padding: 1rem 0;
+    color: var(--P-Dark-Blue);
+}
+
+.articles-box p{
+    color: var(--N-Grayish-Blue);
+    font-size: 0.925rem;
+}
+
+.articles-box h3:hover{
+    color: var(--P-Lime-Green);
+    cursor: pointer;
+}
+
+.content{
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+/* FOOTER */
+
+footer{
+    padding: 4rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--P-Dark-Blue);
+}
+
+.footer-left-content{
+    display: flex;
+    align-items: start;
+}
+
+
+.footer-logo{
+    filter: invert(1) brightness(100); 
+}
+
+.socials-container{
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+}
+
+.socials-container img:hover{
+    filter: invert(61%) sepia(99%) saturate(352%) hue-rotate(82deg) brightness(92%) contrast(94%);
+}
+
+footer nav{
+    padding-left: 8rem;
+}
+
+footer nav ul{
+    padding: 0;
+}
+
+footer nav li{
+    padding: 0.5rem 3rem;
+}
+
+footer nav ul li a{
+    color: var(--N-White);
+}
+
+footer nav ul li a:hover{
+    color: var(--P-Lime-Green);
+}
+
+footer .request-button{
+    margin-bottom: 5rem;
+}
+
+footer span{
+    color: var(--N-Grayish-Blue);
+    font-size: 0.8rem;
+}
